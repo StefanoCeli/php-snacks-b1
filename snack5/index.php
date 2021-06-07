@@ -13,10 +13,20 @@
 $paragrafo="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi autem optio magni atque voluptatum tempora architecto. Aliquam quae dignissimos exercitationem, eaque ipsum eveniet neque dicta esse recusandae voluptatum delectus cum velit asperiores tempora fuga aut molestiae corrupti quam. Ullam sequi qui totam! Quasi quos inventore quas recusandae numquam accusantium dicta.";
 var_dump($paragrafo);
 
-$porzione= explode('.',$paragrafo,-1);
+$elenco= explode('.',$paragrafo);
 var_dump($porzione);
 
 ?>
+
+<ul>
+   <?php 
+     foreach($elenco as $valore){
+         if(!empty($valore)){
+   ?>
+    <li><?php echo $valore ?>.</li>
+    <?php }
+    } ?>
+</ul>
 
 </body>
 </html>
